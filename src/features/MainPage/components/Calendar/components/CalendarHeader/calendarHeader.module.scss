@@ -1,0 +1,80 @@
+.calendarHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #00bfa5;
+  position: relative;
+  &__icon{
+    position: absolute;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #00b49c;
+    box-sizing: border-box;
+    &[id='1st']
+    {
+      &:active{
+        right: 3px;
+      }
+    }
+    &[id='2nd']
+    {
+      &:active{
+        right: 3px;
+      }
+    }
+    &[id='3d']
+    {
+      &:active{
+        left: 3px;
+      }
+    }
+    &[id='4d']
+    {
+      &:active{
+        left: 3px;
+      }
+    }
+    &::before{
+      background-color: #00b49c;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      transition: all 0.6s ease;
+      width: 0%;
+      height: 100%;
+      z-index: 1;
+    }
+    &:hover::before{
+      width: 100%;
+    }
+    button {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      z-index: 2;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      z-index: 2;
+    }
+  }
+  &__date{
+    flex-grow: 3;
+    span {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

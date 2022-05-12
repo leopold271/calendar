@@ -1,0 +1,13 @@
+.weekDays {
+  flex-grow: 1;
+  background-color: #5df2d6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weekDay {
+  flex-basis: 116px;
+  flex-grow: 1;
+  text-align: center;
+}
